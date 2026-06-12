@@ -1,0 +1,38 @@
+# Igdrsil release repo — .gitignore
+#
+# This repo holds distribution artefacts. Most binaries are too large
+# for git and are stored in GitHub Releases. The repo carries the
+# signed manifest (small, text) + provenance copies of binaries
+# (committed deliberately) + signing source-of-truth.
+
+# macOS Finder noise
+.DS_Store
+**/.DS_Store
+
+# Build outputs from the planning workspace, if anyone copy-pastes
+build/
+*.dSYM/
+
+# Local secrets / dev signing keys — never committed.
+# (Production signing keys live in vault per Q26; dev keys live in
+# the planning workspace under tool/installer/, gitignored there too.)
+*.priv.bin
+*.p12
+*.pfx
+*-private.pem
+secrets.env
+
+# Editor noise
+*.swp
+*~
+.idea/
+.vscode/
+
+# Binaries staged for review but not yet release-signed.
+# Once signed + tagged, copies move into binaries/<platform>/ and
+# get committed deliberately for provenance.
+staging/
+
+# Logs and trace files
+*.log
+*.trace
