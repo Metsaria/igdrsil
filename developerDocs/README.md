@@ -5,7 +5,7 @@ This release package contains only two documentation tracks:
 1. **User documentation** — how to use the Igdrsil app.
 2. **Developer documentation** — how to develop an Igdrsil extension.
 
-All content is in English. Internal plans, backlog files, architecture decision records, GTM drafts, legal templates, and research notes are intentionally excluded.
+All content is in English. Internal plans, backlog files, technical decision notes, GTM drafts, legal templates, and research notes are intentionally excluded.
 
 ## Start here
 

@@ -8,7 +8,7 @@ Common extension types:
 
 - **DataSource**: watches or reads a source and emits items into Igdrsil.
 - **Trigger**: reacts to events or item metadata.
-- **Tool**: exposes callable functionality to agents, usually through an MCP-shaped interface.
+- **Tool**: exposes a clear action that Igdrsil can call when the customer allows it.
 - **Skill**: packages agent instructions or domain knowledge.
 - **Pipeline**: wires sources, triggers, agents, and Task output together.
 

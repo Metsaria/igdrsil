@@ -23,7 +23,7 @@
 ## Excluded
 
 - Internal work packages.
-- Architecture decision records.
+- Technical decision records.
 - GTM drafts and pitch collateral.
 - Legal templates.
 - Research notes.

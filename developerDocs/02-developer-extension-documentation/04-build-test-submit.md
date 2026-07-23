@@ -8,7 +8,7 @@
 4. Run local extension tests.
 5. Validate the manifest.
 6. Run the extension in test mode.
-7. Confirm no customer content, settings, secrets, prompts, task names, file paths, logs, credentials, Matrix IDs, or model output are transmitted to developer infrastructure.
+7. Confirm no customer content, settings, secrets, prompts, task names, file paths, logs, credentials, account IDs, or model output are transmitted to developer infrastructure.
 
 ## Manifest validation
 

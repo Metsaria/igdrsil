@@ -1,0 +1,206 @@
+/* ==========================================================================
+   Igdrsil — Design Tokens
+   Palette B (warm teal / amber / cream), ported verbatim from design/colors.md.
+   Light theme is the default; dark theme applies via prefers-color-scheme
+   OR an explicit [data-theme="dark"] override on <html>. A [data-theme="light"]
+   override forces light even when the OS prefers dark.
+   ========================================================================== */
+
+:root {
+  /* --- Brand & Primary (teal) --- */
+  --primary: #0F5C5C;
+  --primary-hover: #0A4747;
+  --primary-pressed: #073838;
+  --primary-subtle: #E0EDED;
+  --primary-on: #FFFFFF;
+
+  /* --- Accent (burnt amber — AI / intelligence moments ONLY) --- */
+  --accent: #B8651C;
+  --accent-hover: #9A5418;
+  --accent-subtle: #F5E8D9;
+  --accent-on: #FFFFFF;
+
+  /* --- Surfaces & Neutrals --- */
+  --bg-base: #FAF7F2;      /* warm cream, not pure white */
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #FFFFFF;
+  --bg-sunken: #F2EDE5;
+  --bg-hover: #EFEAE0;
+
+  /* --- Borders & Dividers --- */
+  --border-subtle: #E8E1D4;
+  --border-default: #D4CABA;
+  --border-strong: #A8997F;
+
+  /* --- Text --- */
+  --text-primary: #1F1B16;
+  --text-secondary: #4A4339;
+  --text-tertiary: #7A7160;
+  --text-disabled: #B0A695;
+  --text-inverse: #FAF7F2;
+  --text-link: #0F5C5C;
+
+  /* --- Semantic / Status --- */
+  --success: #2D6E4E;
+  --success-subtle: #E1EFE7;
+  --warning: #B8861C;
+  --warning-subtle: #F5EBD0;
+  --danger: #A8341C;
+  --danger-subtle: #F2DDD6;
+  --info: #1C5C8A;
+  --info-subtle: #D9E6F0;
+
+  /* --- Focus & Interaction --- */
+  --focus-ring: rgba(15, 92, 92, 0.40);
+  --selection-bg: rgba(15, 92, 92, 0.20);
+  --overlay-scrim: rgba(31, 27, 22, 0.50);
+
+  /* --- Elevation (used sparingly — Swiss/minimal prefers borders) --- */
+  --shadow-sm: 0 1px 2px rgba(31, 27, 22, 0.06);
+  --shadow-md: 0 4px 8px rgba(31, 27, 22, 0.08), 0 1px 3px rgba(31, 27, 22, 0.06);
+  --shadow-lg: 0 12px 24px rgba(31, 27, 22, 0.10), 0 4px 8px rgba(31, 27, 22, 0.06);
+
+  /* --- Typography --- */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  /* Type scale (spacious, editorial) */
+  --fs-eyebrow: 0.8125rem;   /* 13px */
+  --fs-small: 0.875rem;      /* 14px */
+  --fs-body: 1.0625rem;      /* 17px */
+  --fs-lead: 1.25rem;        /* 20px */
+  --fs-h3: 1.375rem;         /* 22px */
+  --fs-h2: clamp(1.75rem, 3.5vw, 2.5rem);
+  --fs-h1: clamp(2.5rem, 6vw, 4rem);
+
+  --lh-tight: 1.1;
+  --lh-heading: 1.2;
+  --lh-body: 1.6;
+
+  /* --- Spacing scale (spacious — density 3/10) --- */
+  --space-1: 0.25rem;   /* 4  */
+  --space-2: 0.5rem;    /* 8  */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.5rem;    /* 24 */
+  --space-6: 2rem;      /* 32 */
+  --space-8: 3rem;      /* 48 */
+  --space-10: 4.5rem;   /* 72 */
+  --space-12: 6rem;     /* 96 */
+  --space-16: 8rem;     /* 128 */
+
+  /* --- Radius (restrained — nothing above 8px except pills) --- */
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-3: 8px;
+  --radius-full: 999px;
+
+  /* --- Layout --- */
+  --content-max: 1080px;
+  --content-wide: 1200px;
+  --header-h: 64px;
+
+  /* --- Motion --- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur: 240ms;
+}
+
+/* --- Dark theme: applied when OS prefers dark AND user hasn't forced light --- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #4FB3B3;
+    --primary-hover: #6BC4C4;
+    --primary-pressed: #3A9999;
+    --primary-subtle: #1A3838;
+    --primary-on: #0A1F1F;
+
+    --accent: #E89A4F;
+    --accent-hover: #F0AD6B;
+    --accent-subtle: #3A2A18;
+    --accent-on: #1F1408;
+
+    --bg-base: #181613;
+    --bg-surface: #221F1A;
+    --bg-elevated: #2B2722;
+    --bg-sunken: #13110E;
+    --bg-hover: #2F2B25;
+
+    --border-subtle: #332E27;
+    --border-default: #473F35;
+    --border-strong: #6B5F50;
+
+    --text-primary: #F2EDE3;
+    --text-secondary: #C2B8A5;
+    --text-tertiary: #8F8573;
+    --text-disabled: #5C5347;
+    --text-inverse: #1F1B16;
+    --text-link: #4FB3B3;
+
+    --success: #5FB088;
+    --success-subtle: #1A2E24;
+    --warning: #D9A93D;
+    --warning-subtle: #332918;
+    --danger: #D96A52;
+    --danger-subtle: #33201B;
+    --info: #6BA8D1;
+    --info-subtle: #1A2733;
+
+    --focus-ring: rgba(79, 179, 179, 0.50);
+    --selection-bg: rgba(79, 179, 179, 0.25);
+    --overlay-scrim: rgba(0, 0, 0, 0.65);
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.30);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.40), 0 1px 3px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.50), 0 4px 8px rgba(0, 0, 0, 0.30);
+  }
+}
+
+/* --- Explicit dark override (manual toggle), regardless of OS setting --- */
+:root[data-theme="dark"] {
+  --primary: #4FB3B3;
+  --primary-hover: #6BC4C4;
+  --primary-pressed: #3A9999;
+  --primary-subtle: #1A3838;
+  --primary-on: #0A1F1F;
+
+  --accent: #E89A4F;
+  --accent-hover: #F0AD6B;
+  --accent-subtle: #3A2A18;
+  --accent-on: #1F1408;
+
+  --bg-base: #181613;
+  --bg-surface: #221F1A;
+  --bg-elevated: #2B2722;
+  --bg-sunken: #13110E;
+  --bg-hover: #2F2B25;
+
+  --border-subtle: #332E27;
+  --border-default: #473F35;
+  --border-strong: #6B5F50;
+
+  --text-primary: #F2EDE3;
+  --text-secondary: #C2B8A5;
+  --text-tertiary: #8F8573;
+  --text-disabled: #5C5347;
+  --text-inverse: #1F1B16;
+  --text-link: #4FB3B3;
+
+  --success: #5FB088;
+  --success-subtle: #1A2E24;
+  --warning: #D9A93D;
+  --warning-subtle: #332918;
+  --danger: #D96A52;
+  --danger-subtle: #33201B;
+  --info: #6BA8D1;
+  --info-subtle: #1A2733;
+
+  --focus-ring: rgba(79, 179, 179, 0.50);
+  --selection-bg: rgba(79, 179, 179, 0.25);
+  --overlay-scrim: rgba(0, 0, 0, 0.65);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.40), 0 1px 3px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.50), 0 4px 8px rgba(0, 0, 0, 0.30);
+}
