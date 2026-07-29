@@ -5,6 +5,7 @@ on:
     branches: [release]
     paths:
       - installer/model-registry.json
+  workflow_dispatch: {}
 
 jobs:
   upload:
